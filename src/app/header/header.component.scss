@@ -1,0 +1,22 @@
+.page-container {
+    width: 100%;
+    padding: 20px;
+    background-color: lightblue;
+    margin-bottom: 10px;
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        li {
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                font-size: 20px;
+                color: black;
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.wrapper {
+    padding: 20px;
+
+    .user-text {
+        font-size: 24px;
+        color: red;
+    }
+
+    .inline-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+
+        p {
+            margin: 0;
+            font-size: 22px;
+        }
+    }
+}

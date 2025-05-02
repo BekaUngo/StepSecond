@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <h1>My Name is - {{ returnMyName() }} and lastName is a - {{ lastName }}</h1>
+  <a [href]="youtubeUrl" target="_blank">გადადის Youtube-ზე</a>
+
+  <br />
+  <input
+    type="text"
+    style="display: inline-block; margin-top: 20px"
+    [(ngModel)]="userText"
+  />
+  <p>
+    მომხმარებლის ჩაწერილი ტექსტი: <span class="user-text">{{ userText }}</span>
+  </p>
+  <div class="inline-wrapper">
+    <button 
+        type="button" 
+        class="btn btn-success" 
+        (click)="calculateMyAge(100)"
+    >Calculate my Age</button>
+    <p>{{myAge}}</p>
+  </div>
+</div>
