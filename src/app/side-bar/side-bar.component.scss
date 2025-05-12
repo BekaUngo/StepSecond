@@ -1,19 +1,47 @@
 .wrapper {
     padding: 20px;
+    display: flex;
+    gap: 50px;
 
-    .user-text {
-        font-size: 24px;
-        color: red;
-    }
-
-    .inline-wrapper {
+    .row-box {
         display: flex;
         align-items: center;
-        gap: 25px;
+        gap: 20px;
+        margin-bottom: 20px;
+        cursor: pointer;
+
+        .icon-img {
+            height: 50px;
+        }
 
         p {
             margin: 0;
-            font-size: 22px;
+            font-size: 1.2rem;
         }
+    }
+
+    .default {
+        background-color: green;
+    }
+
+    .active {
+        background-color: lightblue;
+    }
+
+    .non-active {
+        background-color: lightcoral;
+    }
+
+}
+
+.number-container {
+
+    p {
+        cursor: pointer;
+    }
+
+    .active {
+        background-color: lightgreen;
+        display: inline-block;
     }
 }

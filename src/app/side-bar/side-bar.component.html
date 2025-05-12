@@ -1,22 +1,42 @@
 <div class="wrapper">
-  <h1>My Name is - {{ returnMyName() }} and lastName is a - {{ lastName }}</h1>
-  <a [href]="youtubeUrl" target="_blank">გადადის Youtube-ზე</a>
-
-  <br />
-  <input
-    type="text"
-    style="display: inline-block; margin-top: 20px"
-    [(ngModel)]="userText"
-  />
-  <p>
-    მომხმარებლის ჩაწერილი ტექსტი: <span class="user-text">{{ userText }}</span>
-  </p>
-  <div class="inline-wrapper">
-    <button 
-        type="button" 
-        class="btn btn-success" 
-        (click)="calculateMyAge(100)"
-    >Calculate my Age</button>
-    <p>{{myAge}}</p>
+  <div class="side-bar-box">
+    <div class="row-box" *ngFor="let value of sideBarArray; trackBy trackSideBar">
+      <img [src]="value.iconImg" [alt]="linkName" class="icon-img">
+      <p (click)="onClick(value)">{{value.name}}</p>
+    </div>
   </div>
+  <app-side-bar-details
+    [childData]="infoToChild"
+    [name]="'beka'"
+    (product)="catchData($event)"
+  ></app-side-bar-details>
 </div>
+<h4>Does user wants to but? - {{infoFromChild?.name}}</h4>
+<ng-template #otherDiv>
+  <p>Else-ის შემთხვევა</p>
+  <p>{{otherName}}</p>
+</ng-template>
+
+
+<div class="wrapper" *ngIf="showDiv; else otherDiv">
+  <h2 class="default" [ngClass]="{
+    'active' : randomNumber > 50,
+    'non-active': randomNumber < 40
+  }">{{myName}}</h2>
+  <p [ngStyle]="{'background-color':returnStyle()}">{{randomNumber}}</p>
+</div>
+
+<button (click)="toggleMenu()">Toggle</button>
+
+<!-- <div class="number-container">
+  <p 
+    *ngFor="let number of numbers; 
+    let i=index; trackBy trackId" 
+    (click)="showPara(i)"
+    [ngClass]="{'active': activeClass === i}"
+    >my number is - {{number}}</p>
+</div> -->
+
+
+<input type="text" [(ngModel)]="userText">
+<p>{{userText}}</p>

@@ -1,13 +1,18 @@
-<div class="page-container">
-    <ul>
-        <li>
-            <a href="">მთავარი გვერდი</a>
-        </li>
-        <li>
-            <a href="">ჩვენს შესახებ</a>
-        </li>
-        <li>
-            <a href="">კონტაქტი</a>
-        </li>
-    </ul>
+<div class="page-container" >
+  <ul *ngIf="!showBurgerMenu">
+    <li>
+      <a href="">მთავარი გვერდი</a>
+    </li>
+    <li>
+      <a href="">ჩვენს შესახებ</a>
+    </li>
+    <li>
+      <a href="">კონტაქტი</a>
+    </li>
+  </ul>
+  <div class="burger-menu" *ngIf="showBurgerMenu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </div>
