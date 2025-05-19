@@ -1,0 +1,36 @@
+.wrapper {
+  padding: 20px;
+  display: flex;
+  gap: 50px;
+}
+.wrapper .row-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.wrapper .row-box .icon-img {
+  height: 50px;
+}
+.wrapper .row-box p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.wrapper .default {
+  background-color: green;
+}
+.wrapper .active {
+  background-color: lightblue;
+}
+.wrapper .non-active {
+  background-color: lightcoral;
+}
+
+.number-container p {
+  cursor: pointer;
+}
+.number-container .active {
+  background-color: lightgreen;
+  display: inline-block;
+}/*# sourceMappingURL=side-bar.component.css.map */

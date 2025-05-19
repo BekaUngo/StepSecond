@@ -1,0 +1,40 @@
+.page-container {
+  width: 100%;
+  padding: 20px;
+  background-color: lightblue;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-container ul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 0;
+}
+.page-container ul li {
+  list-style: none;
+}
+.page-container ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+.page-container ul li .active-link {
+  background-color: lightcoral;
+  padding: 10px;
+}
+.page-container .burger-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.page-container .burger-menu span {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+}/*# sourceMappingURL=header.component.css.map */

@@ -1,18 +1,20 @@
 <div class="page-container" >
-  <ul *ngIf="!showBurgerMenu">
+  <ul >
     <li>
-      <a href="">მთავარი გვერდი</a>
+      <a 
+        routerLink="" 
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{exact:true}"
+        >მთავარი გვერდი</a>
     </li>
     <li>
-      <a href="">ჩვენს შესახებ</a>
+      <a routerLink="users" routerLinkActive="active-link">მომხმარებლები</a>
     </li>
     <li>
-      <a href="">კონტაქტი</a>
+      <a (click)="navigateToAboutUs()" routerLinkActive="active-link">ჩვენს შესახებ</a>
+    </li>
+    <li>
+      <a routerLink="contact" routerLinkActive="active-link">კონტაქტი</a>
     </li>
   </ul>
-  <div class="burger-menu" *ngIf="showBurgerMenu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
 </div>

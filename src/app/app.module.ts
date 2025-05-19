@@ -7,19 +7,35 @@ import { HeaderComponent } from './header/header.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { FormsModule } from '@angular/forms';
 import { SideBarDetailsComponent } from './side-bar/side-bar-details/side-bar-details.component';
+import { MainComponent } from './main/main.component';
+import { UsersComponent } from './users/users.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactComponent } from './contact/contact.component';
+import { UserComponent } from './user/user.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SideBarComponent,
-    SideBarDetailsComponent
+    SideBarDetailsComponent,
+    MainComponent,
+    UsersComponent,
+    AboutUsComponent,
+    ContactComponent,
+    UserComponent,
+    PageNotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

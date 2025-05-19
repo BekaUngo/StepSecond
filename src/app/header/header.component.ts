@@ -1,5 +1,5 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { Component } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -8,17 +8,13 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 })
 export class HeaderComponent{
 
+  constructor(
+    private router:Router
+  ){}
 
-@HostListener('window:resize', ['$event'])
-sizeChange(event) {
-  if(event.target.innerWidth < 651){
-    this.showBurgerMenu = true
-  } else {
-    this.showBurgerMenu = false
+  navigateToAboutUs(){
+    this.router.navigate(['about-us'],{
+      fragment:'section4'
+    })
   }
-  console.log('size changed.', event);
-}
-
-  showBurgerMenu:boolean = false
-
 }

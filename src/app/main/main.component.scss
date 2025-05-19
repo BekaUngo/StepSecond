@@ -1,0 +1,16 @@
+.wrapper {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 20px;
+
+    button {
+        padding: 12px 25px;
+        background-color: green;
+        font-size: 22px;
+    }
+
+    .logout {
+        background-color: red;
+    }
+}

@@ -1,0 +1,12 @@
+<p>user works!</p>
+<p>user id - {{userId}}</p>
+<p>user name - {{userName}}</p>
+<p>Filter Name - {{queryName}}</p>
+
+<button (click)="changeDetails()">Change user Details</button>
+<br>
+<br>
+<button
+[routerLink]="[]"
+[queryParams]="{name:'beka'}"
+>Add Query Params</button>
