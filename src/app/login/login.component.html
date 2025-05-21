@@ -1,1 +1,13 @@
-<h1 style="text-align: center; margin-top: 200px;">დალოგინდიიი</h1>
+<div class="wrapper" *ngIf="showLogin">
+    <div class="close-btn">
+        X
+    </div>
+    <div class="input-btn">
+        <label for="name">შენი სახელი</label>
+        <input type="text" id="name">
+    </div>
+    <div class="input-btn">
+        <label for="lastName">შენი გვარი</label>
+        <input type="text" id="lastName">
+    </div>
+</div>

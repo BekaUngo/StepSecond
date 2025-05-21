@@ -5,3 +5,13 @@
 </div>
 <button (click)="increaseNumber()">Increase</button>
 <button (click)="decreaseNumber()">Descrease</button>
+<br>
+<br>
+<br>
+<button style="display: inline-block; margin-right: 20px;" (click)="emitData()">Emit Data</button>
+<button (click)="getData()">Get Data</button>
+<br>
+<br>
+<div class="random-number" style="padding:20px">
+    <p *ngFor="let num of randomArr">Random Names: {{num.name}}</p>
+</div>
