@@ -1,0 +1,58 @@
+.page-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+
+    .form-container {
+        padding: 15px 25px;
+        border-radius: 8px;
+        background-color: rgb(50, 63, 117);
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        form {
+
+            .input-box {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 400px;
+                margin-bottom: 10px;
+
+
+
+                label {
+                    color: white;
+                }
+    
+                input {
+                    padding: 10px;
+                    border-radius: 8px;
+
+                    &.ng-invalid.ng-touched {
+                        outline: 1px solid red;
+                    }
+                }
+
+                span {
+                    color: red;
+                }
+            }
+
+            button {
+                width: 100%;
+                background-color: rgb(66, 165, 99);
+                padding: 10px;
+                color: white;
+                margin-top: 20px;
+                border-radius: 8px;
+            }
+        }
+    }
+
+
+}

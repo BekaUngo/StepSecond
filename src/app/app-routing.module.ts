@@ -8,6 +8,7 @@ import { UserComponent } from './user/user.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './services/guard/auth.guard';
+import { TemplateFormComponent } from './template-form/template-form.component';
 
 const routes: Routes = [
   {
@@ -40,6 +41,10 @@ const routes: Routes = [
   {
     path:'login',
     component: LoginComponent
+  },
+  {
+    path:'template-form',
+    component: TemplateFormComponent
   },
   {
     path: '**',

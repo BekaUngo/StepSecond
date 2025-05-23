@@ -14,7 +14,8 @@ import { ContactComponent } from './contact/contact.component';
 import { UserComponent } from './user/user.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
+import { TemplateFormComponent } from './template-form/template-form.component'; 
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     ContactComponent,
     UserComponent,
     PageNotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    TemplateFormComponent
   ],
   imports: [
     BrowserModule,

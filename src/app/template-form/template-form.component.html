@@ -1,0 +1,45 @@
+<div class="page-wrapper">
+  <div class="form-container">
+    <button (click)="fillForm()">fill Info</button>
+    <h1>Template Driven Form</h1>
+    <form (ngSubmit)="onSubmitForm()" #f="ngForm">
+      <div class="input-box">
+        <label for="name">შენი სახელი</label>
+        <input
+          type="text"
+          id="name"
+          name="userName"
+          ngModel
+          required
+          #username="ngModel"
+          (input)="checkData(username)"
+        />
+        <span *ngIf="username?.touched && username?.invalid">
+          ეს არის აუცილებელი ველი
+        </span>
+      </div>
+      <div class="input-box">
+        <label for="lastname">შენი გვარი</label>
+        <input type="text" id="lastname" name="userLastName" ngModel />
+      </div>
+      <div class="input-box">
+        <label for="email">შენი მეილი</label>
+        <input
+          type="text"
+          id="email"
+          name="userEmail"
+          #useremail="ngModel"
+          required
+          email
+          ngModel
+        />
+        <span *ngIf="useremail?.touched && useremail?.invalid"> შეიყვანე სწორი ფორმატით </span>
+      </div>
+      <button type="submit" [disabled]="!f.valid">Submit</button>
+    </form>
+  </div>
+</div>
+<h1>User Data</h1>
+<p>name - {{userData.userName}}</p>
+<p>lastName - {{userData.userLastName}}</p>
+<p>email - {{userData.userEmail}}</p>
