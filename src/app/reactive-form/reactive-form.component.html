@@ -1,0 +1,37 @@
+<div class="page-wrapper">
+    <div class="form-container">
+      <h1>Reactive Form</h1>
+      <form [formGroup]="myForm" (ngSubmit)="onFormSubmit()">
+        <div class="user-data" formGroupName="userData">
+            <div class="input-box">
+              <label for="name">შენი სახელი</label>
+              <input
+                type="text"
+                id="name"
+                formControlName="userName"
+              />
+            </div>
+            <div class="input-box">
+              <label for="lastname">შენი გვარი</label>
+              <input type="text" id="lastname" formControlName="lastName"/>
+            </div>
+        </div>
+            <div class="input-box">
+            <label for="email">შენი მეილი</label>
+            <input
+            type="text"
+            id="email"
+            formControlName="userEmail"
+          />
+        </div>
+        <button type="button" (click)="addInput()">Add Input</button>
+        <div class="input-array" formArrayName="lessons">
+            <div class="input-box" *ngFor="let lesson of lessonList; let i=index">
+                <input type="text" [formControlName]="i">
+            </div>
+        </div>
+        <button type="submit" >Submit</button>
+      </form>
+    </div>
+  </div>
+  
