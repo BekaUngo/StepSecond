@@ -15,9 +15,13 @@ export class LoginComponent implements OnInit{
   ){}
 
   ngOnInit(): void {
-    // this.loginService.getLoginStatus().subscribe(value=>{
-    //   console.log(value)
-    //   this.showLogin = value
-    // })
+    this.loginService.getLoginStatus().subscribe(value=>{
+      console.log(value)
+      this.showLogin = value
+    })
+  }
+
+  logout(){
+    this.loginService.logout()
   }
 }

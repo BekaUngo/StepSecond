@@ -16,7 +16,17 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TemplateFormComponent } from './template-form/template-form.component';
-import { ReactiveFormComponent } from './reactive-form/reactive-form.component'; 
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ChildComponent } from './child/child.component'; 
+import { CustomPipe } from './pipes/custom.pipe';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatInputModule} from '@angular/material/input';
+import {MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule} from '@angular/material/dialog';
+import { ConfirmationFormComponent } from './confirmation-form/confirmation-form.component';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +42,10 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     PageNotFoundComponent,
     LoginComponent,
     TemplateFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    ChildComponent,
+    CustomPipe,
+    ConfirmationFormComponent
   ],
   imports: [
     BrowserModule,
@@ -40,9 +53,17 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatDialogModule
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
